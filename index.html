@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Event Management</title>
+    <!-- Tailwind CSS CDN को लिंक करें -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter को लिंक करें -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- अपनी कस्टम CSS फ़ाइल को लिंक करें -->
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* कस्टम स्क्रॉल-स्नैप के लिए */
+        .scroll-snap-y-mandatory {
+            scroll-snap-type: y mandatory;
+        }
+        .scroll-snap-start {
+            scroll-snap-align: start;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- हेडर और नेविगेशन बार -->
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-pink-600 rounded-md p-2 hover:bg-pink-50 transition-colors">
+                Wedding Dreams
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-pink-600 font-medium transition-colors">Home</a>
+                <a href="#services" class="text-gray-700 hover:text-pink-600 font-medium transition-colors">Services</a>
+                <a href="#portfolio" class="text-gray-700 hover:text-pink-600 font-medium transition-colors">Portfolio</a>
+                <a href="#contact" class="text-gray-700 hover:text-pink-600 font-medium transition-colors">Contact Us</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-button" class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- मोबाइल मेन्यू -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 shadow-lg">
+            <a href="#home" class="block px-4 py-2 text-gray-700 hover:bg-pink-50">Home</a>
+            <a href="#services" class="block px-4 py-2 text-gray-700 hover:bg-pink-50">Services</a>
+            <a href="#portfolio" class="block px-4 py-2 text-gray-700 hover:bg-pink-50">Portfolio</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-pink-50">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- हीरो सेक्शन -->
+        <section id="home" class="relative bg-cover bg-center h-screen flex items-center justify-center text-white p-6 rounded-b-xl shadow-lg"
+            style="background-image: url('https://placehold.co/1920x1080/F0F0F0/808080?text=Dream+Wedding+Background');">
+            <div class="absolute inset-0 bg-black opacity-50 rounded-b-xl"></div>
+            <div class="relative z-10 text-center max-w-3xl">
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-4 drop-shadow-lg">
+                    Your Dream Wedding, Our Expertise
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 drop-shadow-md">
+                    Exceptional wedding planning services to make every moment unforgettable.
+                </p>
+                <a href="#contact" class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all transform hover:scale-105">
+                    Contact Us Now
+                </a>
+            </div>
+        </section>
+
+        <!-- हमारी सेवाएं सेक्शन -->
+        <section id="services" class="py-20 bg-gradient-to-r from-pink-50 to-white rounded-xl shadow-inner mx-4 my-8 p-6">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-pink-700 mb-12">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- सेवा कार्ड 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <img src="https://placehold.co/100x100/FFC0CB/FFFFFF?text=Venue" alt="Venue Booking" class="mx-auto mb-6 rounded-full shadow-md">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Venue Booking</h3>
+                        <p class="text-gray-600">Helping you find and book the perfect venue for your dream wedding.</p>
+                    </div>
+                    <!-- सेवा कार्ड 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <img src="https://placehold.co/100x100/FFC0CB/FFFFFF?text=Decor" alt="Decoration & Theme" class="mx-auto mb-6 rounded-full shadow-md">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Decoration & Theme</h3>
+                        <p class="text-gray-600">Designing stunning decorations and themes that reflect your style.</p>
+                    </div>
+                    <!-- सेवा कार्ड 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <img src="https://placehold.co/100x100/FFC0CB/FFFFFF?text=Catering" alt="Catering & Menu" class="mx-auto mb-6 rounded-full shadow-md">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Catering & Menu</h3>
+                        <p class="text-gray-600">Ensuring a delicious and memorable dining experience for your guests.</p>
+                    </div>
+                    <!-- सेवा कार्ड 4 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <img src="https://placehold.co/100x100/FFC0CB/FFFFFF?text=Photo" alt="Photography & Videography" class="mx-auto mb-6 rounded-full shadow-md">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Photography & Videography</h3>
+                        <p class="text-gray-600">Beautifully capturing your special moments to cherish forever.</p>
+                    </div>
+                    <!-- सेवा कार्ड 5 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <img src="https://placehold.co/100x100/FFC0CB/FFFFFF?text=Music" alt="Entertainment & Music" class="mx-auto mb-6 rounded-full shadow-md">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Entertainment & Music</h3>
+                        <p class="text-gray-600">Arranging DJs, bands, and other entertainment to liven up your wedding.</p>
+                    </div>
+                    <!-- सेवा कार्ड 6 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <img src="https://placehold.co/100x100/FFC0CB/FFFFFF?text=Coord" alt="On-site Coordination" class="mx-auto mb-6 rounded-full shadow-md">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">On-site Coordination</h3>
+                        <p class="text-gray-600">Ensuring smooth execution of every detail on your wedding day.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- पोर्टफोलियो सेक्शन -->
+        <section id="portfolio" class="py-20 bg-gray-100 rounded-xl shadow-inner mx-4 my-8 p-6">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-pink-700 mb-12">Our Portfolio</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- पोर्टफोलियो आइटम 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/FFD1DC/808080?text=Elegant+Wedding" alt="Elegant Wedding" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Elegant Wedding</h3>
+                            <p class="text-gray-600">A grand wedding based on a classic and elegant theme.</p>
+                        </div>
+                    </div>
+                    <!-- पोर्टफोलियो आइटम 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/E0BBE4/808080?text=Beach+Wedding" alt="Beach Wedding" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Beach Wedding</h3>
+                            <p class="text-gray-600">Organizing a beautiful and relaxed beach wedding.</p>
+                        </div>
+                    </div>
+                    <!-- पोर्टफोलियो आइटम 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/957DAD/808080?text=Royal+Wedding" alt="Royal Wedding" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Royal Wedding</h3>
+                            <p class="text-gray-600">A royal and magnificent wedding, straight out of a fairy tale.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- संपर्क करें सेक्शन -->
+        <section id="contact" class="py-20 bg-gradient-to-l from-pink-50 to-white rounded-xl shadow-inner mx-4 my-8 p-6">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-pink-700 mb-12">Contact Us</h2>
+                <div class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-xl">
+                    <p class="text-gray-600 mb-8">Contact us today to start planning your dream wedding.</p>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-left text-gray-700 font-medium mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" placeholder="Your Name" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-left text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" placeholder="Your Email" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-left text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" placeholder="Your Phone Number">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-left text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" placeholder="Tell us about your wedding plans..." required></textarea>
+                        </div>
+                        <button type="submit" class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                    <div id="form-message" class="mt-4 text-green-600 hidden">Your message has been sent successfully! We will contact you soon.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- फुटर -->
+    <footer class="bg-gray-900 text-white py-12 rounded-t-xl shadow-lg">
+        <div class="container mx-auto px-6 text-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-pink-400 mb-4">Wedding Dreams</h3>
+                    <p class="text-gray-400">Dedicated to transforming your dream wedding into reality.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-pink-400 mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-pink-300 transition-colors">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-pink-300 transition-colors">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-pink-300 transition-colors">Portfolio</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-pink-300 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-pink-400 mb-4">Connect With Us</h3>
+                    <p class="text-gray-400">info@weddingdreams.com</p>
+                    <p class="text-gray-400">+91 98765 43210</p>
+                    <div class="flex justify-center space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-pink-300"><img src="https://placehold.co/24x24/FFFFFF/000000?text=FB" alt="Facebook" class="rounded-full"></a>
+                        <a href="#" class="text-gray-400 hover:text-pink-300"><img src="https://placehold.co/24x24/FFFFFF/000000?text=IG" alt="Instagram" class="rounded-full"></a>
+                        <a href="#" class="text-gray-400 hover:text-pink-300"><img src="https://placehold.co/24x24/FFFFFF/000000?text=TW" alt="Twitter" class="rounded-full"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 mt-8 text-gray-500">
+                &copy; 2025 Wedding Dreams. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- अपनी कस्टम JavaScript फ़ाइल को लिंक करें -->
+    <script src="script.js"></script>
+</body>
+</html>

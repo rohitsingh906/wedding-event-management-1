@@ -1,0 +1,68 @@
+/* style.css */
+
+/* Due to the use of Tailwind CSS, very little custom CSS is needed here. */
+/* This file is primarily for styles not directly available in Tailwind or needing override. */
+
+/* Hero Section specific styling */
+#home {
+    background-attachment: fixed; /* To keep the background image fixed */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Ensure it takes at least full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Transitions for mobile menu */
+#mobile-menu {
+    transition: max-height 0.3s ease-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+#mobile-menu.open {
+    max-height: 200px; /* Adjust according to the total height of menu items */
+}
+
+/* Shadow and transition for buttons */
+button[type="submit"],
+a.bg-pink-600 {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover,
+a.bg-pink-600:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Focus style for input fields */
+input:focus,
+textarea:focus {
+    border-color: #ec4899; /* pink-500 */
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.3); /* pink-500 with opacity */
+}
+
+/* To further define section padding and margin */
+section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* Hover effect for footer links and icons */
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Border-radius and shadow for image placeholders */
+img.rounded-full {
+    border-radius: 9999px; /* Tailwind's rounded-full */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Object-fit for portfolio images */
+.h-64.object-cover {
+    object-fit: cover;
+}
